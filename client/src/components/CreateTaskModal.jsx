@@ -14,7 +14,7 @@ const CreateTaskModal = ({
   const handleCreateTask = async () => {
     await axios
       .post(
-        "http://172.31.20.61:8000/api/v1/task/post",
+        "https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/task/post",
         { title, description },
         {
           withCredentials: true,

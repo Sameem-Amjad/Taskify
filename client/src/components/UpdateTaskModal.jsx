@@ -17,7 +17,7 @@ const UpdateTaskModal = ({
   useEffect(() => {
     const getSingleTask = async () => {
       await axios
-        .get(`http://172.31.20.61:8000/api/v1/task/single/${id}`, {
+        .get(`https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/task/single/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -38,7 +38,7 @@ const UpdateTaskModal = ({
   const handleUpdateTask = async () => {
     await axios
       .put(
-        `http://172.31.20.61:8000/api/v1/task/update/${id}`,
+        `https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/task/update/${id}`,
         {
           title,
           description,

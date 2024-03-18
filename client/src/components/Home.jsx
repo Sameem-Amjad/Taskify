@@ -18,7 +18,7 @@ const Home = ({ isAuthenticated, tasks, setTasks, taskTitle }) => {
 
   const deleteTask = async (id) => {
     await axios
-      .delete(`http://172.31.20.61:8000/api/v1/task/delete/${id}`, {
+      .delete(`https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/task/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

@@ -24,7 +24,7 @@ function Header({
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://172.31.20.61:8000/api/v1/task/mytask",
+        "https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/task/mytask",
         { withCredentials: true }
       );
       setAllTasks(response.data.tasks);
@@ -37,7 +37,7 @@ function Header({
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://172.31.20.61:8000/api/v1/user/logout",
+        "https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/user/logout",
         { withCredentials: "true" }
       );
       toast.success(data.message);

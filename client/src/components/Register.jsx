@@ -27,7 +27,7 @@ function Register({ isAuthenticated, setIsAuthenticated }) {
     formData.append("password", password);
     formData.append("avatar", avatar);
     await axios
-      .post("http://172.31.20.61:8000/api/v1/user/register", formData, {
+      .post("https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/user/register", formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       })

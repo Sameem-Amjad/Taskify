@@ -17,7 +17,7 @@ const App = () => {
     const handleGetUser = async () => {
       try {
         const { data } = await axios.get(
-          "http://172.31.20.61:8000/api/v1/user/me",
+          "https://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:8000/api/v1/user/me",
           { withCredentials: true }
         );
         setIsAuthenticated(true);
